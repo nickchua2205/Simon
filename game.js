@@ -38,7 +38,7 @@ function checkAnswer(currentLevel) {
         }
     }
     else {
-        $("h1").text("Game Over. Press any key to restart.");
+        $("h1").text("Game Over. Touch Me to Restart!");
         playSound("wrong");
         $("body").addClass("game-over");
         setTimeout(function () {
@@ -56,7 +56,7 @@ $(".btn").on("click", function (event) {
     checkAnswer(userClickedPattern.length - 1);
 })
 
-$(document).on("keydown", function () {
+$("h1").on("click", function () {
     if (level === 0)
         nextSequence();
 })
